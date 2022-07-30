@@ -29,3 +29,15 @@ CREATE TABLE "public"."TruliaPropertyDetails" (
     "daysOnMarket" character varying(25) NOT NULL,
     "currentMarketStatus" character varying(50) NOT NULL
 ) WITH (oids = false);
+
+
+DROP TABLE IF EXISTS "TruliaPriceHistory";
+CREATE TABLE "public"."TruliaPriceHistory" (
+    "street" character varying(100) NOT NULL,
+    "city" character varying(100) NOT NULL,
+    "state" character varying(50) NOT NULL,
+    "date" character varying(50) NOT NULL,
+    "price" character varying(25) NOT NULL,
+    "event" text NOT NULL,
+    "source" text NOT NULL
+) WITH (oids = false);
